@@ -1,97 +1,113 @@
+@color: green;
+
 /*清除元素默认的内外边距*/
 * {
 	margin: 0;
 	padding: 0;
+	color: @color;
 }
+
 .header {
 	height: 50px;
-	background-color: #252a2f;
+	background-color: #252A2F;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
 	font-family: Roboto, San Francisco, Helvetica Neue, Helvetica, Arial, PingFangSC-Light, Hiragina Sans GB, WenQuanYi Micro Hei, microsoft yahei ui, microsoft yahei, sans-serif;
-	color: #ffffff;
+	color: @color;
 	padding-left: 200px;
-	border-bottom: 1px solid #363b41;
+	border-bottom: 1px solid #363B41;
+	.nav {
+		font-size: 14px;
+		a {
+			/*行内块元素*/
+			color: @color;
+			padding: 0 10px;
+			text-decoration: none;
+			min-width: 90px;
+			text-align: center;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			display: inline-block;
+			height: 50px;
+			line-height: 50px;
+			/*鼠标经过链接出现底边框*/
+			&:hover {
+				border-bottom: 4px solid #00C1DE;
+				background: #1E1E1E;
+				color: #FFF;
+			}
+		}
+	}
+
+
+	/*左侧菜单图标*/
+	.header-menu-toggle {
+		position: absolute;
+		left: 0;
+		height: 50px;
+		width: 60px;
+		border-right: 1px solid rgba(255, 255, 255, 0.1);
+		line-height: 50px;
+		text-align: center;
+		cursor: pointer;
+	}
 }
-.header .nav a {
-	color: #dadada;
-	padding: 0 10px;
-	text-decoration: none;
-	min-width: 90px;
-	text-align: center;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-/*鼠标经过链接出现底边框*/
-.header .nav a:hover {
-	border-bottom: 4px solid #00c1de;
-	background: #1e1e1e;
-	color: #ffffff;
-}
-/*行内块元素*/
-.header .nav a {
-	display: inline-block;
-	height: 50px;
-	line-height: 50px;
-}
-/*左侧菜单图标*/
-.header .header-menu-toggle {
-	position: absolute;
-	left: 0;
-	height: 50px;
-	width: 60px;
-	border-right: 1px solid rgba(255, 255, 255, 0.1);
-	line-height: 50px;
-	text-align: center;
-	cursor: pointer;
-}
+
+
 #app {
 	height: 100%;
 }
+
 .header .title {
 	position: absolute;
 	left: 70px;
 	top: 16px;
+	color: @color;
 	font-size: 18px;
 }
-.header .nav {
-	font-size: 14px;
-}
+
+
 .header .title img {
 	width: 120px;
 }
+
 img {
 	vertical-align: middle;
 	border-style: none;
 }
+
 /*删除a标签下划线*/
 .header .header-right .right-item a {
-	color: #ffffff;
+	color: #FFF;
 	display: block;
 	text-decoration: none;
 }
+
 .header .header-right .right-item .language-image {
 	width: 16px;
 	vertical-align: text-bottom;
 	margin-right: 6px;
 }
+
 .header .header-right {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
+
 .header .header-right .right-item {
 	display: inline-block;
 	height: 50px;
 	line-height: 50px;
 	padding: 0 12px;
-	color: #ffffff;
+	color: #FFF;
 	font-size: 14px;
 	cursor: pointer;
 }
+
 /*内容页面*/
 .detail-all {
 	position: absolute;
@@ -104,8 +120,9 @@ img {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	background: #252a2f;
+	background: #252A2F;
 }
+
 /*接口列表*/
 .api-list {
 	float: left;
@@ -113,21 +130,23 @@ img {
 	width: 300px;
 	min-width: 300px;
 	height: 100%;
-	border: 1px solid #cccccc;
-	background: #f4f4f4;
+	border: 1px solid #CCC;
+	background: #F4F4F4;
 	overflow: scroll;
 }
+
 /*参数列表*/
 .param-list {
 	position: relative;
 	width: 320px;
 	min-width: 320px;
-	background: #ffffff;
+	background: #FFF;
 	height: 100%;
 	float: left;
 	overflow: auto;
-	border-right: 1px solid #cccccc;
+	border-right: 1px solid #CCC;
 }
+
 /*运行结果*/
 .result {
 	height: 100%;
@@ -138,8 +157,9 @@ img {
 	-ms-flex: auto;
 	flex: auto;
 	padding: 10px;
-	background: #ffffff;
+	background: #FFF;
 }
+
 /*项目左侧列表*/
 .project-list .project-list-left {
 	padding-top: 60px;
@@ -147,38 +167,45 @@ img {
 	overflow: scroll;
 	height: 100%;
 }
+
 .project-list .project-list-left .project-item a {
 	display: block;
 	position: relative;
 	white-space: pre-line;
 	cursor: pointer;
 	font-size: 12px;
-	color: #ffffff;
+	color: #FFF;
 	text-decoration: none;
 	padding: 14px 20px 14px 30px;
 }
+
 /*右侧悬浮变色*/
 .header .header-right .right-item a:hover {
-	color: #0ba6d5;
-	background: #1e1e1e;
+	color: #0BA6D5;
+	background: #1E1E1E;
 }
+
 /*右侧悬浮背景*/
 .header .header-right .right-item:hover {
-	background: #1e1e1e;
+	background: #1E1E1E;
 }
+
 /*左侧项目列表悬浮变色*/
 .detail-all .project-list .project-list-left a:hover {
-	color: #1ccce3;
-	background: #1e1e1e;
+	color: #1CCCE3;
+	background: #1E1E1E;
 }
+
 .api-list .api-info .api-search {
 	padding: 0 20px;
 }
+
 .api-list .api-info .api-project-title {
 	font-size: 18px;
 	padding-left: 20px;
 	margin-top: 20px;
 }
+
 .api-list .api-info .api-project-info {
 	padding: 10px 20px;
 	min-height: 30px;

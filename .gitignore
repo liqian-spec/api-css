@@ -3,3 +3,7 @@
 package-lock.json
 
 node_modules/
+
+yarn.lock
+
+mix-manifest.json

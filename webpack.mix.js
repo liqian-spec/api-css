@@ -2,4 +2,9 @@
 
 let mix = require('laravel-mix');
 
-mix.less('style.less', 'css/style.css');
+mix.less('style/style.less', 'style/style.css')
+    .browserSync({
+        files : ["style/*.css", "js/*.js"],
+        server : './'
+    })
+    .disableNotifications();

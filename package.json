@@ -7,5 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "laravel-mix": "^6.0.9"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "browser-sync-webpack-plugin": "2.2.2",
+    "less": "^4.1.0",
+    "less-loader": "^7.2.1",
+    "postcss": "^8.1"
   }
 }

@@ -11,6 +11,8 @@ yarn add laravel-mix --save-dev
 
 ```
 yarn
+
+npx mix watch
 ```
 
 
